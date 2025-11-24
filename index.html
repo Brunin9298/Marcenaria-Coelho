@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcenaria Coelho</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/land.css">
+
+    <script src="js/jswasm/sqlite3.js"></script>
+    <script type="module" src="js/database.js"></script>
+    <script src="js/mostruario.js" defer></script>
+    <script src="js/contact.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#know">Conhecer</a></li>
+                    <li><a href="#mostruario">Mostruário</a></li>
+                    <li><a href="">Acompanhe seu Pedido</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="img">
+            <div class="container">
+                <div class="home-section">
+                    <div class="">
+
+                        <h1 class="title white">Marcenaria <span class="title">Coelho</span></h1>
+                        <h2 class="subtitle white">Móveis Sob Medida e Planejados</h2>
+                    </div>
+                </div>
+                <div class="home-section">
+                    <div class="img"></div>
+                </div>
+            </div>
+        </section>
+        <section id="know">
+            <div class="container">
+                <h2 class="title black">Conheça a Marcenaria</h2>
+                <div id="know-content" class="content">
+                    <div class="know-content">
+                        <h3 class="subtitle">Por que escolher nossa marcenaria?</h3>
+                        <p class="know-text">
+                            Aqui você encontra um trabalho feito com cuidado artesanal, atenção aos detalhes e a
+                            experiência de quem entende de móveis planejados. Cada projeto é tratado como único, sempre
+                            com compromisso com a qualidade, pontualidade e a satisfação do cliente. Nosso objetivo é
+                            transformar o ambiente de forma prática e elegante, criando móveis que atendem exatamente o
+                            que você precisa.
+                        </p>
+
+                    </div>
+                    <div class="know-content">
+                        <h3 class="subtitle">Como funciona o nosso processo?</h3>
+                        <p class="know-text">
+                            Nosso trabalho começa com a visita técnica, onde fazemos a medição do ambiente para garantir
+                            que cada peça se encaixe perfeitamente. Depois planejamos o projeto, definimos os materiais
+                            e iniciamos o corte e a preparação das peças. Em seguida, realizamos a montagem no local,
+                            garantindo firmeza, alinhamento e bom acabamento. Todo o processo é pensado para entregar um
+                            móvel que una estética, funcionalidade e precisão.
+                        </p>
+
+                    </div>
+                    <div class="know-content">
+                        <h3 class="subtitle">Que tipo de material utilizamos?</h3>
+                        <p class="know-text">
+                            Trabalhamos principalmente com MDF de alta qualidade, um material resistente, moderno e
+                            muito versátil. Ele permite cortes precisos, excelente acabamento e uma grande variedade de
+                            cores e texturas. Além disso, o MDF garante uma durabilidade superior quando bem tratado,
+                            oferecendo um móvel bonito, funcional e feito realmente sob medida para o seu espaço.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mostruario">
+            <div class="container">
+                <h2 class="title black">Nossos Projetos</h2>
+
+                <div id="cards" class="content">
+                    <div class="card img" id="card1">
+                        <div class="card-info">Aparador - Carvalho Hanover</div>
+                    </div>
+                    <div class="card img" id="card2">
+                        <div class="card-info">Cozinha com Aéreos - Branco</div>
+                    </div>
+                    <div class="card img" id="card3">
+                        <div class="card-info">Quarto - Cinza Urban e Freijó</div>
+                    </div>
+                    <div class="card img" id="card4">
+                        <div class="card-info">Cozinha com Aéreos - Branco</div>
+                    </div>
+                    <div class="card img" id="card5">
+                        <div class="card-info">Painel com Hack e Ripado - Areia e Freijó</div>
+                    </div>
+                    <div class="card img" id="card6">
+                        <div class="card-info">Painel Ripado - Freijó</div>
+                    </div>
+                    <div class="card img" id="card7">
+                        <div class="card-info">Cozinha com Aéreos - Branco</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <div class="contact-content"></div>
+                <div class="contact-content">
+                    <form onsubmit="sendMessageWhatsapp(event)">
+
+                        <label for="nameUserZap">Nome:</label>
+                        <input type="text" id="nameUserZap">
+
+                        <label for="messageUserZap">Mensagem:</label>
+                        <input type="text" id="messageUserZap">
+
+                        <button type="submit">enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section"></div>
+            <hr>
+            <div class="footer-section"></div>
+            <hr>
+            <div class="footer-section">
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+<!-- 
+    Tabela Usuario {
+        pk cpf/cnpj: 11 letras,
+        email: string,
+        celular: string,
+        senha: string grande
+        tipo: string('cliente', 'admin'),
+        endereço: string fds
+
+    }
+
+    Tabela Projeto {
+        pk id: inteiro not null,
+        data_pedido: timestamp default current_date,
+        data_medicao: data,
+        data_entrega: data ou null,
+        descricao: string grande,
+        status: string('aguardando_medicao', 'em_producao', 'finalizado','entregue'),
+        imagem: string do caminho,
+        fk cliente: 11 letras,
+    }
+
+    Tabela Categoria {
+        pk id: inteiro not null,
+        nome: string,
+    }
+-->
+
+
+
+<!-- na aba de conheça colocar secaozinha de qual material trabalhamos - mdf e porque ele -->
