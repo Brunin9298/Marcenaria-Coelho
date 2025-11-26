@@ -1,5 +1,5 @@
 #home {
-    min-height: 90vh;
+    /* min-height: 90vh; */
     /* background-image: url(../imgs/projetos/9.jpg); */
     background-color: var(--primary-color);
 }
@@ -24,8 +24,12 @@
     height: 100%;
 }
 
-#home span {
+.coelho1 {
     color: var(--secondary-color);
+}
+
+.coelho2 {
+    color: var(--primary-color);
 }
 
 
@@ -144,12 +148,56 @@
 }
 
 
-#contact>.container {
+#contact .content {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     flex-flow: row wrap;
 }
 
+.contact-content.img {
+    background-image: url("../imgs/projetos/4.jpg");
+    flex: 1;
+}
+
+@media (width < 768px){
+    .contact-content.img {
+        display: none;
+    }
+}
+
 .contact-content {
-    flex: 1 380px;
+    flex: 1;
+}
+
+#contact-form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#contact-form input, #contact-form textarea {
+    outline: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 6px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+#contact-form textarea {
+    resize: vertical;
+    height: 400px;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    outline: 2.5px solid var(--primary-color);
+    
+}
+
+#contact-form button[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+
+
+.footer-section {
+
 }
